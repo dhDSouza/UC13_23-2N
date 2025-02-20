@@ -51,7 +51,7 @@ console.log(pessoa1.apresentar());
 
 ---
 
-# 🎓 **3. Encapsulamento: Modificadores de Acesso**
+# 📦 **3. Encapsulamento: Modificadores de Acesso**
 
 O **encapsulamento** protege os atributos e métodos da classe. O TypeScript fornece três níveis de acesso:
 
@@ -61,7 +61,7 @@ O **encapsulamento** protege os atributos e métodos da classe. O TypeScript for
 | **private** | Acessível apenas dentro da própria classe. |
 | **protected** | Acessível dentro da classe e de classes filhas. |
 
-### 💎 **Exemplo com encapsulamento**
+### **Exemplo com encapsulamento**
 
 ```ts
 class ContaBancaria {
@@ -91,7 +91,7 @@ console.log(minhaConta.consultarSaldo());
 
 ---
 
-# 🎤 **4. Herança: Reutilizando Código**
+# 💸 **4. Herança: Reutilizando Código**
 
 A **herança** permite que uma classe herde características de outra.
 
@@ -216,8 +216,6 @@ Agora, temos um código mais organizado e seguindo os princípios de OO! 🚀
 2️⃣ **Implemente um CRUD para `Produto` com Express.**
 
 3️⃣ **Crie uma interface `IVeiculo` e implemente uma classe `Carro` baseada nela.**
-
-4️⃣ **Crie um middleware que registre o tempo da requisição antes de chamar `next()`.**
 
 ---
 
