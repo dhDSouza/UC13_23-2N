@@ -221,10 +221,10 @@ Agora, temos um código mais organizado e seguindo os princípios de OO! 🚀
 
 # ✅ **Resumo da Aula**
 
-✅ Revisamos **Orientação a Objetos (OO)** e seus pilares.
-✅ Aprendemos **como usar classes, herança, interfaces e polimorfismo** em TypeScript.
-✅ Aplicamos **OO no desenvolvimento com Express**.
-✅ Criamos **exercícios práticos para reforçar o aprendizado**.
+✅ Revisamos **Orientação a Objetos (OO)** e seus pilares.   
+✅ Aprendemos **como usar classes, herança, interfaces e polimorfismo** em TypeScript.   
+✅ Aplicamos **OO no desenvolvimento com Express**.   
+✅ Criamos **exercícios práticos para reforçar o aprendizado**.   
 
 Agora você está pronto para aplicar OO nos seus projetos Express! 🚀
 
