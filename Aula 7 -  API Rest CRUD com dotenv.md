@@ -23,7 +23,7 @@ npm init -y
 Agora, instalamos as dependências necessárias:
 
 ```bash
-npm install express mysql2 typeorm reflect-metadata dotenv
+npm install express mysql2 typeorm reflect-metadata dotenv cors
 npm install --save-dev typescript ts-node-dev @types/node @types/express
 ```
 
