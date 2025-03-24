@@ -159,32 +159,40 @@ export class UserController {
     const { name, email } = req.body;
     const user = UserRepository.create({ name, email });
     await UserRepository.save(user);
-    return res.status(201).json(user);
+    res.status(201).json(user);
+    return;
   }
 
   static async getAll(req: Request, res: Response) {
     const users = await UserRepository.find();
-    return res.json(users);
+    res.json(users);
+    return;
   }
 
   static async getById(req: Request, res: Response) {
     const { id } = req.params;
     const user = await UserRepository.findOneBy({ id: Number(id) });
-    if (!user) return res.status(404).json({ message: "User not found" });
-    return res.json(user);
+    if (!user) {
+        res.status(404).json({ message: "User not found" });
+        return;
+    }
+    res.json(user);
+    return;
   }
 
   static async update(req: Request, res: Response) {
     const { id } = req.params;
     const { name, email } = req.body;
     await UserRepository.update(id, { name, email });
-    return res.json({ message: "User updated successfully" });
+    res.json({ message: "User updated successfully" });
+    return;
   }
 
   static async delete(req: Request, res: Response) {
     const { id } = req.params;
     await UserRepository.delete(id);
-    return res.json({ message: "User deleted successfully" });
+    res.json({ message: "User deleted successfully" });
+    return;
   }
 }
 ```
