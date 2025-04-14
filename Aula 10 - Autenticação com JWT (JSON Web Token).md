@@ -194,3 +194,59 @@ router.get("/users", authenticateToken, UserController.getAll);
 > Pense no JWT como um **ingresso de cinema** 🎟️.  
 > Uma vez que você o tem, você pode entrar na sala (rota protegida) sem precisar comprar de novo (refazer login).  
 > Mas se o ingresso expirar ou for falsificado, o segurança (middleware) vai te barrar.
+
+## Exercícios
+
+### 🧪 **Exercício 1: Setup do Projeto + Criação do Usuário**
+
+**Objetivo**: Criar uma API básica que permite registrar usuários com senha criptografada.
+
+**Passos sugeridos**:
+
+1. Inicialize o projeto com TypeScript (`tsc --init`).
+2. Configure o Express.
+3. Configure o TypeORM com MySQL.
+4. Crie uma entidade `User` com os campos:
+   - `id`
+   - `name`
+   - `email` (único)
+   - `password` (criptografado com bcrypt)
+
+6. Crie um endpoint `POST /register` para cadastrar o usuário.
+
+**Dica**: use `bcrypt.hash(password, salt)`.
+
+📌 **Desafio extra**:
+- Validar se o email já está cadastrado.
+
+---
+
+### 🔐 **Exercício 2: Login com JWT**
+
+**Objetivo**: Criar um endpoint de login que retorna um token JWT.
+
+**Passos sugeridos**:
+1. Crie o endpoint `POST /login`.
+2. No login:
+   - Verifique se o usuário existe pelo email.
+   - Compare a senha com `bcrypt.compare`.
+   - Gere um JWT com `jsonwebtoken`.
+
+📌 **Desafio extra**:
+- Permitir login com username ou email.
+- Armazenar o token no client e simular um consumo com `Insomnia` ou `Postman`.
+
+---
+
+### ✅ **Exercício 3: Rota protegida com JWT**
+
+**Objetivo**: Criar um middleware de autenticação JWT para proteger rotas.
+
+**Passos sugeridos**:
+1. Crie o middleware `authMiddleware`.
+2. No middleware:
+   - Verifique o token no header `Authorization: Bearer <token>`.
+   - Decodifique e valide o JWT.
+   - Anexe o ID do usuário ao `req`.
+
+3. Crie uma rota `GET /profile` protegida que retorna os dados do usuário logado.
